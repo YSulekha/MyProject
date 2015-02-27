@@ -9,17 +9,21 @@ public class QuickSort {
 		q.quicksort(q.num);
 		q.print();
 	}
-	public void quicksort(int[] quic){
+	public int partition(int[] quic){
 		int pivot = quic[0];
 		int i=1;
 		int j=quic.length-1;
 		int temp = 0;
-		int aux[];
+		//int aux[];
 		while(i <=j){
-			while(quic[i] < pivot)
+			while(i < quic.length && quic[i] <= pivot)
 				i=i+1;
-			while(quic[j] > pivot)
+			while(j>=0 && quic[j] >= pivot)
 				j=j-1;
+			if(i >= quic.length)
+				i=i-1;
+			if(j < 0)
+				j = j+1;
 			temp = quic[j];
 			quic[j] = quic[i];
 			quic[i] = temp;
@@ -32,21 +36,31 @@ public class QuickSort {
 		temp = quic[j];
 		quic[j] = pivot;
 		quic[0] = temp;
-		aux = new int[i-0];
-		for(int k = 0;k < j;k++){
-			aux[k] = quic[k];
+		return j;
 		}
-		System.out.println("i "+i+"j "+j);
-		for(int z=0;z<aux.length;z++){
-			System.out.print(aux[z]+" ");
+	public void quicksort(int [] quic){
+		if(quic.length > 0){
+		int s = partition(quic);
+		int aux[];
+		if(s > 0){
+		aux = new int[s];
+		for(int k = 0;k < s;k++){
+			aux[k] = quic[k];
 		}
 		quicksort(aux);
-		aux = new int[j-i];
-		for(int k = j;k < quic.length;k++){
-			aux[k] = quic[k];
 		}
+		aux = new int[quic.length-s-1];
+		int h=0;
+		for(int k = s+1;k < quic.length;k++){
+			aux[h] = quic[k];
+			h=h+1;
 		}
-	
+		quicksort(aux);
+		}
+		for(int i = 0;i<quic.length;i++){
+			System.out.print(quic[i]+" ");
+		}
+	}
 
 	public void randomNumberGen(int size){
 		num = new int[size];
