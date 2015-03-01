@@ -19,6 +19,9 @@ public class BinarySearch {
 		}
 	}
 	public int search(){
+		int low=0;
+		int high = nums.length-1;
+		int middle= (high-low)/2;
 		return 0;
 	}
 }
