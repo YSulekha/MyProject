@@ -7,7 +7,12 @@ public class BinarySearch {
 	public static void main(String[] args){
 		BinarySearch b = new BinarySearch();
 		b.userInput();
-		b.search();
+		int s = b.search();
+		if(s==1){
+			System.out.println("Found");
+		}
+		else
+			System.out.println("Not Found");
 	}
 	public void userInput(){
 		Scanner s = new Scanner(System.in);
@@ -33,6 +38,7 @@ public class BinarySearch {
 			else{
 				high = middle-1;
 			}
+			middle= (high-low)/2;
 		}
 		return 0;
 	}
