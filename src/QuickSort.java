@@ -14,7 +14,6 @@ public class QuickSort {
 		int i=1;
 		int j=quic.length-1;
 		int temp = 0;
-		//int aux[];
 		while(i <=j){
 			while(i < quic.length && quic[i] <= pivot)
 				i=i+1;
@@ -70,7 +69,6 @@ public class QuickSort {
 	}
 	
 	public void print(){
-		
 		for(int i = 0;i<num.length;i++){
 			System.out.print(num[i]+" ");
 		}
