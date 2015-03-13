@@ -32,10 +32,7 @@ public class MergeSort {
 		int m =0;
 		int n = 0;
 		int k=0;
-	/*	for(int z =0;z<left.length;z++){
-			System.out.print(left[z]+" lff");
-			System.out.print(right[z]+" rggt");
-		}*/
+	
 		while(m < i && n < j){
 			if(left[m] <= right[n]){
 				merge[k] = left[m];
@@ -56,15 +53,13 @@ public class MergeSort {
 			}
 		}
 		else {
+			while(n < j){
 			merge[k] = right[n];
 			n++;
 			k++;
-		}
-		System.out.println("");
-		for(int z =0;z<merge.length;z++){
-			
-			System.out.print(merge[z]+"mmm");
 			}
+		}
+		
 	}
 	
 	public void randomNumberGen(int size){
