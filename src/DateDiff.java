@@ -3,16 +3,9 @@ import java.util.Scanner;
 
 
 public class DateDiff {
-	Date date1;
-	Date date2;
-	int months[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+	
 	public static void main(String args[]){
 		DateDiff d = new DateDiff();
-	//	System.out.println("Enter the first date");
-	//	Scanner s = new Scanner(System.in);
-	//	String d1 = s.next();
-	//	System.out.println("Enter the second date");
-	//	String d2 = s.next();
 		String d1 = "1/2/2000";
 		String d2 = "1/2/2006";
 		System.out.println("Date diff:"+d.getDateDiff(d1,d2));
@@ -26,6 +19,7 @@ public class DateDiff {
 		return days2-days1;
 	}
 	public int calculateDays(String date){
+		int months[] = {31,28,31,30,31,30,31,31,30,31,30,31};
 		String [] s = date.split("/");
 		int year = Integer.parseInt(s[2]);
 		int month = Integer.parseInt(s[1]);
