@@ -52,7 +52,20 @@ public class GraphImp {
 		return(adjancencyList.get(source));
 	}
 	
+	public void DepthFirstSearch(){
+		int vertices[] = new int[adjancencyList.size()];
+		for(int j = 0;j < vertices.length;j++){
+			vertices[j] = 0;
+		}
+		int count = 0;
+		for(int i = 1;i <= adjancencyList.size();i++){
+			if(vertices[i-1] == 0){
+				DFS(i);
+			}
+		}
+	}
 	public void DFS(int source){
+		int count = 1;
 		
 	}
 }
