@@ -6,6 +6,8 @@ import java.util.HashMap;
 
 public class GraphImp {
 	Map<Integer, List<Integer>> adjancencyList;
+	int vertices[];
+	int count = 0;
 	public static void main(String args[]){
 		GraphImp g = new GraphImp();
 		g.adjancencyListImp();
@@ -53,11 +55,11 @@ public class GraphImp {
 	}
 	
 	public void DepthFirstSearch(){
-		int vertices[] = new int[adjancencyList.size()];
+		vertices = new int[adjancencyList.size()];
 		for(int j = 0;j < vertices.length;j++){
 			vertices[j] = 0;
 		}
-		int count = 0;
+		
 		for(int i = 1;i <= adjancencyList.size();i++){
 			if(vertices[i-1] == 0){
 				DFS(i);
@@ -65,7 +67,11 @@ public class GraphImp {
 		}
 	}
 	public void DFS(int source){
-		int count = 1;
-		
+		count=count+1;
+		vertices[source-1] = count;
+		int j = adjancencyList.get(source).size();
+		while(j > 0){
+			
+		}
 	}
 }
