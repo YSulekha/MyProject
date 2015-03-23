@@ -12,7 +12,7 @@ public class GraphImp {
 		GraphImp g = new GraphImp();
 		g.adjancencyListImp();
 	}
-	public void adjancencyListImp(){
+	public void adjancencyListImp() {
 		int source;
 		int dest;
 		Scanner s = new Scanner(System.in);
@@ -21,23 +21,23 @@ public class GraphImp {
 		System.out.println("Enter number o edges");
 		int e = s.nextInt();
 		adjancencyList = new HashMap<Integer, List<Integer>>();
-		for(int i = 1;i <= v;i++){
+		for(int i = 1;i <= v;i++) {
 			List<Integer> l = new LinkedList<Integer>();
 			adjancencyList.put(i, l);
 		}
 		System.out.println("Enter the edge in \"source Destination\"format");
 		int j = 1;
-		while(j <= e){
-		source = s.nextInt();
-		dest = s.nextInt();
-		setEdge(source,dest);
-		j++;
+		while(j <= e) {
+			source = s.nextInt();
+			dest = s.nextInt();
+			setEdge(source,dest);
+			j++;
 		}
 		System.out.println("Graph:");
-		for(int i = 1;i <= v;i++){
+		for(int i = 1;i <= v;i++) {
 			System.out.print(i);
 			List<Integer> l = getEdge(i);
-			for(int k=0;k<l.size();k++){
+			for(int k=0;k<l.size();k++) {
 				System.out.print("->"+l.get(k));
 			}
 			System.out.println();
