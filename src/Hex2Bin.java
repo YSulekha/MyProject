@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Hex2Bin {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Hex2Bin hb = new Hex2Bin();
 		System.out.println("Enter the hexadecimal number : ");
 		Scanner s = new Scanner(System.in);
