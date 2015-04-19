@@ -1,7 +1,6 @@
 '''
 Created on Apr 16, 2015
 
-@author: aharyadi
 '''
 def Leapyear_finder(year):
     if year%4 == 0 and year%100 != 0:
