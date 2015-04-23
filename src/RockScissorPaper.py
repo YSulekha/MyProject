@@ -13,8 +13,9 @@ def user_input():
         score = compute(user_selection)
 
 def compute(user_selection):
-    items = ['r','s','p']
+    items = ['R','S','P']
     rand_item = random.choice(items)
     print("Human: "+user_selection+"Computer: "+rand_item)
-    if user_selection == '':
-        
+    user_score = 0
+    if user_selection == 'R' and rand_item == 'S':
+        user_score = user_score+1
