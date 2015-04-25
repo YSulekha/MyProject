@@ -14,10 +14,10 @@ def user_input():
 
 def compute(user_selection):
     items = ['R','S','P']
-    rand_item = random.choice(items)
-    print("Human: "+user_selection+"Computer: "+rand_item)
+    comp_item = random.choice(items)
+    print("Human: "+user_selection+"Computer: "+comp_item)
     user_score = 0
-    if user_selection == 'R' and rand_item == 'S':
+    if user_selection == 'R' and comp_item == 'S':
         user_score = user_score+1
-    elif user_selection =='S' and rand_item == 'P':
+    elif user_selection =='S' and comp_item == 'P':
         user_score = user_score+1
