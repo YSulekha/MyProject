@@ -9,7 +9,7 @@ def user_input():
     max_points = input("How many points are required for a win?")
     score = 0
     while score >int(max_points):
-        user_selection = input("Choose (R)ock, (P)aper, or (S)cissors?")
+        user_selection = input("Choose (R)ock (P)aper, or(S)cissors?")
         score = compute(user_selection)
 
 def compute(user_selection):
