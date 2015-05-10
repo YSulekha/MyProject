@@ -15,7 +15,7 @@ public class Arithmetic {
 		int result=0;
 		switch(op){
 		case '+':result = one+two;
-						 break;
+			break;
 		case '-':result = one-two;
 		         break;
 		case '*':result = one*two;
