@@ -9,6 +9,7 @@ public class BinarySearchTreaa {
 		b.insert(10);
 		b.insert(7);
 		b.insert(4);
+		b.insert(6);
 		System.out.println("Is empty "+b.isEmpty());
 		System.out.println("No of nodes "+b.count() + b.noofnodes);
 		System.out.println("Height "+b.height());
