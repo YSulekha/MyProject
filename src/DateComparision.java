@@ -26,7 +26,7 @@ public class DateComparision {
 				System.out.println("Invalid date");
  
 		} catch (ParseException e) {
-			System.out.println("Invalidsss date");
+			System.out.println("Invalid date");
 			//System.out.println(date);
 			
 		}
