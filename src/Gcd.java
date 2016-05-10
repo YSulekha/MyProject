@@ -2,8 +2,8 @@
 public class Gcd {
 	public static void main(String [] args){
 		Gcd gd = new Gcd();
-		int m=3;
-		int n=2;
+		int m=30;
+		int n=20;
 		System.out.println(gd.findGcd(m,n));
 	}
 	public int findGcd(int m,int n){
